@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="ngi.iot.dashboard">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="ngi.iot.dashboard.interfaces.INgiIotDashboardLayer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="ngi.iot.dashboard"
+      type="plone"
+      directory="static"
+      />
+
+  <browser:page
+    for="ngi.iot.dashboard.interfaces.IDashboard"
+    name="view"
+    class=".view.DashboardView"
+    permission="zope2.View"
+    template="templates/dashboard_view.pt"
+    />
+
+</configure>

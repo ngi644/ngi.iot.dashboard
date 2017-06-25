@@ -1,0 +1,4 @@
+graft src/ngi
+graft docs
+include *.rst
+global-exclude *.pyc

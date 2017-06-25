@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers>
+  <layer
+      name="ngi.iot.dashboard"
+      interface="ngi.iot.dashboard.interfaces.INgiIotDashboardLayer"
+      />
+</layers>

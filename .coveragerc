@@ -1,0 +1,6 @@
+[report]
+include =
+    src/ngi/*
+omit =
+    */test*
+    */upgrades/*
